@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import landingImage from '../assets/landing.jpg'; // Adjust path as necessary
 
 interface TimeLeft {
   days?: number;
@@ -33,10 +34,10 @@ export default function Banner() {
     }, 1000);
 
     return () => clearTimeout(timer);
-  });
+  }, []); // Add an empty dependency array to run once
 
   const timerComponents = Object.keys(timeLeft).map(interval => {
-    const value = timeLeft[interval as keyof TimeLeft]; // Ensure proper indexing
+    const value = timeLeft[interval as keyof TimeLeft];
     if (value === undefined) {
       return null;
     }
@@ -95,7 +96,7 @@ export default function Banner() {
           transition={{ duration: 0.3 }}
         >
           <img
-            src="src/assets/landing.jpg"
+            src={landingImage}
             alt="Delicious Burger"
             className="w-full h-full object-cover"
           />
