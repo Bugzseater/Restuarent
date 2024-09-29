@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import Details from '../components/Details';
+import foodImage from '../assets/landing.jpg';
 
 const Explore = () => {
   return (
@@ -27,7 +28,7 @@ const Explore = () => {
         >
           <motion.img
             whileHover={{ rotate: 5 }}
-            src="./src/assets/landing.jpg"
+            src={foodImage}
             alt="Cheese Burger"
             className="w-full h-48 object-cover rounded-md mb-4 transition duration-300"
           />
@@ -46,7 +47,7 @@ const Explore = () => {
         >
           <motion.img
             whileHover={{ rotate: 5 }}
-            src="./src/assets/landing.jpg"
+            src={foodImage}
             alt="Pizza"
             className="w-full h-48 object-cover rounded-md mb-4 transition duration-300"
           />
@@ -65,7 +66,7 @@ const Explore = () => {
         >
           <motion.img
             whileHover={{ rotate: 5 }}
-            src="./src/assets/landing.jpg"
+            src={foodImage}
             alt="Chicken Wings"
             className="w-full h-48 object-cover rounded-md mb-4 transition duration-300"
           />
@@ -84,7 +85,7 @@ const Explore = () => {
         >
           <motion.img
             whileHover={{ rotate: 5 }}
-            src="./src/assets/landing.jpg"
+            src={foodImage}
             alt="Veggie Wrap"
             className="w-full h-48 object-cover rounded-md mb-4 transition duration-300"
           />

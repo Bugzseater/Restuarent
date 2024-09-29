@@ -1,24 +1,24 @@
-
 import { motion } from 'framer-motion';
+import userImage from '../assets/bg.jpg';
 
 const testimonials = [
   {
     name: "John Doe",
     text: "The food was absolutely amazing! I've never tasted anything like it.",
     role: "Food Enthusiast",
-    image: "./src/assets/bg.jpg", // Replace with your image path
+    image: userImage, // Corrected: Removed curly braces
   },
   {
     name: "Jane Smith",
     text: "Great service and delicious meals! Highly recommend to everyone.",
     role: "Restaurant Critic",
-    image: "./src/assets/bg.jpg", // Replace with your image path
+    image: userImage, // Corrected: Removed curly braces
   },
   {
     name: "Emily Johnson",
     text: "A wonderful dining experience. The ambiance and food are top-notch!",
     role: "Regular Customer",
-    image: "./src/assets/bg.jpg", // Replace with your image path
+    image: userImage, // Corrected: Removed curly braces
   },
 ];
 

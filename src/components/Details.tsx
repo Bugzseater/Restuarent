@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import landingImage from '../assets/landing.jpg';
 
 function Details() {
   return (
@@ -14,7 +15,7 @@ function Details() {
         transition={{ duration: 0.5 }}
       >
         <motion.img 
-          src="./src/assets/landing.jpg" 
+          src={landingImage} 
           alt="Restaurant" 
           className="w-full h-auto rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
           whileHover={{ scale: 1.05 }}
