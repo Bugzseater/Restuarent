@@ -39,19 +39,31 @@ export default function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-red-50">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/about" onClick={toggleMenu} className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
-              About
-            </Link>
-            <Link to="/menu" onClick={toggleMenu} className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
-              Menu
-            </Link>
-            <Link to="/contact" onClick={toggleMenu} className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
-              Contact
-            </Link>
-          </div>
-        </div>
+       <div className="md:hidden bg-gradient-to-r from-yellow-200 to-red-400 rounded-lg shadow-lg font-bold">
+       <div className="px-4 py-3 space-y-2">
+         <Link 
+           to="/about" 
+           onClick={toggleMenu} 
+           className="block px-4 py-2 text-sm text-white rounded-md transition duration-150 ease-in-out hover:bg-gray-800 hover:text-white focus:outline-none focus:bg-gray-800 focus:text-white"
+         >
+           About
+         </Link>
+         <Link 
+           to="/menu" 
+           onClick={toggleMenu} 
+           className="block px-4 py-2 text-sm text-white rounded-md transition duration-150 ease-in-out hover:bg-gray-800 hover:text-white focus:outline-none focus:bg-gray-800 focus:text-white"
+         >
+           Menu
+         </Link>
+         <Link 
+           to="/contact" 
+           onClick={toggleMenu} 
+           className="block px-4 py-2 text-sm text-white rounded-md transition duration-150 ease-in-out hover:bg-gray-800 hover:text-white focus:outline-none focus:bg-gray-800 focus:text-white"
+         >
+           Contact
+         </Link>
+       </div>
+     </div>
       )}
     </header>
   );
