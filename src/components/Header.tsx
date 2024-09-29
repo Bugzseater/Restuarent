@@ -18,9 +18,15 @@ export default function Header() {
           </Link>
         </div>
         <nav className="hidden md:flex space-x-4">
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/menu">Menu</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <Link to="/about" className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+            About
+          </Link>
+          <Link to="/menu" className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+            Menu
+          </Link>
+          <Link to="/contact" className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+            Contact
+          </Link>
         </nav>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-gray-500 focus:outline-none">
@@ -35,35 +41,18 @@ export default function Header() {
       {isMenuOpen && (
         <div className="md:hidden bg-red-50">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <MobileNavLink to="/about" onClick={toggleMenu}>About</MobileNavLink>
-            <MobileNavLink to="/menu" onClick={toggleMenu}>Menu</MobileNavLink>
-            <MobileNavLink to="/contact" onClick={toggleMenu}>Contact</MobileNavLink>
+            <Link to="/about" onClick={toggleMenu} className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+              About
+            </Link>
+            <Link to="/menu" onClick={toggleMenu} className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+              Menu
+            </Link>
+            <Link to="/contact" onClick={toggleMenu} className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">
+              Contact
+            </Link>
           </div>
         </div>
       )}
     </header>
-  );
-}
-
-function NavLink({ to, children }) {
-  return (
-    <Link
-      to={to}
-      className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
-    >
-      {children}
-    </Link>
-  );
-}
-
-function MobileNavLink({ to, onClick, children }) {
-  return (
-    <Link
-      to={to}
-      onClick={onClick}
-      className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium"
-    >
-      {children}
-    </Link>
   );
 }
