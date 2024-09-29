@@ -58,7 +58,7 @@ export default function Banner() {
 
   return (
     <motion.div
-      className="bg-gradient-to-r from-yellow-400 to-red-500 p-6 rounded-xl shadow-2xl w-[80%] mx-auto"
+      className="bg-gradient-to-r from-yellow-400 to-red-500 p-6 rounded-xl shadow-2xl w-[80%] mx-auto sm:w-[90%] "
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
