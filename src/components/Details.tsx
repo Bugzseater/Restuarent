@@ -31,7 +31,7 @@ function Details() {
           It happens online. And when it does, the restaurant description plays a pivotal role.
         </p>
 
-        <Link to={'/'}>
+        <Link to={'/products'}>
           <button className="bg-red-500 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-300 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-50">
             MORE FOODS
           </button>

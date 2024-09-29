@@ -18,10 +18,10 @@ export default function Header() {
           </Link>
         </div>
         <nav className="hidden md:flex space-x-4">
-          <Link to="/about" className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
-            About
+          <Link to="/" className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+            Home
           </Link>
-          <Link to="/menu" className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
+          <Link to="/products" className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
             Menu
           </Link>
           <Link to="/contact" className="text-gray-500 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">
@@ -42,14 +42,14 @@ export default function Header() {
        <div className="md:hidden bg-gradient-to-r from-yellow-200 to-red-400 rounded-lg shadow-lg font-bold">
        <div className="px-4 py-3 space-y-2">
          <Link 
-           to="/about" 
+           to="/" 
            onClick={toggleMenu} 
            className="block px-4 py-2 text-sm text-white rounded-md transition duration-150 ease-in-out hover:bg-gray-800 hover:text-white focus:outline-none focus:bg-gray-800 focus:text-white"
          >
-           About
+           Home
          </Link>
          <Link 
-           to="/menu" 
+           to="/products" 
            onClick={toggleMenu} 
            className="block px-4 py-2 text-sm text-white rounded-md transition duration-150 ease-in-out hover:bg-gray-800 hover:text-white focus:outline-none focus:bg-gray-800 focus:text-white"
          >
