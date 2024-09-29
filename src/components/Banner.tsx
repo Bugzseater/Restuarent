@@ -34,7 +34,7 @@ export default function Banner() {
     }, 1000);
 
     return () => clearTimeout(timer);
-  }, []); // Add an empty dependency array to run once
+  }, []); // Run once
 
   const timerComponents = Object.keys(timeLeft).map(interval => {
     const value = timeLeft[interval as keyof TimeLeft];
@@ -58,7 +58,7 @@ export default function Banner() {
 
   return (
     <motion.div
-      className="bg-gradient-to-r from-yellow-400 to-red-500 p-6 rounded-xl shadow-2xl w-[80%] mx-auto sm:w-[90%] "
+      className="bg-gradient-to-r from-yellow-400 to-red-500 p-4 rounded-xl shadow-2xl w-[90%] mx-auto"
       initial={{ y: 50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -66,7 +66,7 @@ export default function Banner() {
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div className="text-white mb-6 md:mb-0 md:mr-6 flex-1">
           <motion.h2 
-            className="text-3xl font-bold mb-3"
+            className="text-2xl md:text-3xl font-bold mb-3"
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
@@ -74,7 +74,7 @@ export default function Banner() {
             Best Selling OFFER
           </motion.h2>
           <motion.p 
-            className="text-xl mb-4"
+            className="text-lg md:text-xl mb-4"
             initial={{ x: -20, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
@@ -82,7 +82,7 @@ export default function Banner() {
             Offer ends in:
           </motion.p>
           <motion.div 
-            className="flex space-x-3"
+            className="flex flex-wrap space-x-3 space-y-2"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.5 }}
