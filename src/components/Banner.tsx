@@ -45,7 +45,7 @@ export default function Banner() {
     return (
       <motion.div
         key={interval}
-        className="flex flex-col items-center p-2 bg-white bg-opacity-20 rounded-lg"
+        className="flex flex-col items-center p-2 bg-white bg-opacity-20 rounded-lg sm:flex-row sm:space-x-2"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
@@ -91,7 +91,7 @@ export default function Banner() {
           </motion.div>
         </div>
         <motion.div 
-          className="w-full md:w-1/3 aspect-square relative overflow-hidden rounded-xl"
+          className="w-full md:w-1/3 aspect-square relative overflow-hidden rounded-xl "
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
