@@ -10,11 +10,11 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-red-50 shadow-md fixed w-full z-10">
+    <header className="bg-gradient-to-r from-yellow-200 to-red-400 shadow-md fixed w-full z-10">
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-16">
         <div className="flex items-center">
           <Link to="/" className="text-2xl font-bold text-gray-800">
-            LOGO <span className="text-red-400">TEXT</span>
+            BUGER <span className="text-red-400">QUEEN</span>
           </Link>
         </div>
         <nav className="hidden md:flex space-x-4">
