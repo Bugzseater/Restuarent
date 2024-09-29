@@ -14,7 +14,7 @@ export default function Header() {
       <div className="container mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-16">
         <div className="flex items-center">
           <Link to="/" className="text-2xl font-bold text-gray-800">
-            BUGER <span className="text-red-400">QUEEN</span>
+            BUGER <span className="text-white">QUEEN</span>
           </Link>
         </div>
         <nav className="hidden md:flex space-x-4">
