@@ -1,19 +1,26 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-export default function Banner() {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+interface TimeLeft {
+  days?: number;
+  hours?: number;
+  minutes?: number;
+  seconds?: number;
+}
 
-  function calculateTimeLeft() {
+export default function Banner() {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
+
+  function calculateTimeLeft(): TimeLeft {
     const difference = +new Date("2024-10-02T12:00:00") - +new Date();
-    let timeLeft = {};
+    let timeLeft: TimeLeft = {};
 
     if (difference > 0) {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60)
+        seconds: Math.floor((difference / 1000) % 60),
       };
     }
 
@@ -29,7 +36,8 @@ export default function Banner() {
   });
 
   const timerComponents = Object.keys(timeLeft).map(interval => {
-    if (!timeLeft[interval]) {
+    const value = timeLeft[interval as keyof TimeLeft]; // Ensure proper indexing
+    if (value === undefined) {
       return null;
     }
 
@@ -41,7 +49,7 @@ export default function Banner() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <span className="text-3xl font-bold">{timeLeft[interval]}</span>
+        <span className="text-3xl font-bold">{value}</span>
         <span className="text-sm uppercase">{interval}</span>
       </motion.div>
     );
